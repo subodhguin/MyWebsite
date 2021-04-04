@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Message to Unknown Number in WhatsApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css" media="all">
+  #waNo,
+  #msg,
+  #btn{
+    display: block;
+    margin: 0px auto;
+    border: 2px solid green;
+    border-radius: 4px;
+    text-align: center;
+  }
+  input{
+    padding: 4px;
+  }
+</style>
+</head>
+
+<body>
+  <input id="waNo" type="number" placeholder="Enter WhatsApp Number"><br /><input type="text" placeholder="Type Your Message" id="msg"><br />
+  <button id="btn">Message</button>
+  <script type="text/javascript">
+    document.getElementById('btn').addEventListener('click', () => {
+      number = document.getElementById('waNo').value
+      message = document.getElementById('msg').value
+      window.open('http://wa.me/91' + number + '?text=' + message)
+    })
+  </script>
+</body>
